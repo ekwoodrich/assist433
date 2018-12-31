@@ -42,6 +42,9 @@ def hello():
                 ser.write('349955'.encode())
                 #lamp 349955 on / 349964 off
                 #etek: 357635 on / 357644 off
+            elif device == 'heater':
+                logit(command, device)
+                ser.write('357635'.encode())
             elif device == 'living' or device == 'living room' or device == 'living room light':
                 logit(command, device)
                 ser.write('349635'.encode())
@@ -88,6 +91,9 @@ def hello():
             elif device == 'living' or device == 'living room' or device == 'living room light':
                 logit(command, device)
                 ser.write('349644'.encode())
+            elif device == 'heater':
+                logit(command, device)
+                ser.write('357644'.encode())
 
             elif device == 'kitchen' or device == 'kitchen light' or device == 'microwave' or device == 'stove' or device == 'stove light':
                 logit(command, device)
