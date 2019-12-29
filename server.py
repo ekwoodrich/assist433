@@ -6,6 +6,10 @@ app = Flask(__name__)
 ser = serial.Serial('/dev/ttyUSB0', 9600)
 secret = "8808fc52"
 
+@app.route("/", methods = ['GET'])
+def main():
+    return "Server running."
+
 @app.route("/api/", methods=['GET', 'POST'])
 def hello():
     if request.method == 'GET':
